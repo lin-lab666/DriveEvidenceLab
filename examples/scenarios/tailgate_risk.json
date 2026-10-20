@@ -1,0 +1,35 @@
+{
+  "ir_version": "ir/v1",
+  "scenario_id": "tailgate_risk",
+  "road": {
+    "type": "straight",
+    "road_length_m": 500.0,
+    "lanes": 3,
+    "lane_width_m": 3.7,
+    "speed_limit_mps": 33.0
+  },
+  "ego": {
+    "id": "ego",
+    "x_m": 50.0,
+    "y_m": 1.85,
+    "v_mps": 28.0,
+    "heading_rad": 0.0,
+    "length_m": 4.5,
+    "width_m": 1.8,
+    "kind": "car"
+  },
+  "vehicles": [
+    {
+      "id": "v1",
+      "x_m": 70.0,
+      "y_m": 1.85,
+      "v_mps": 10.0,
+      "heading_rad": 0.0,
+      "length_m": 4.5,
+      "width_m": 1.8,
+      "kind": "car"
+    }
+  ],
+  "odd": {},
+  "meta": {"description": "Ego at 28 m/s approaches a slower lead vehicle at 10 m/s."}
+}

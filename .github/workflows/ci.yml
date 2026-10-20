@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install package and dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # commonroad is optional for *using* the toolkit but required for the
+          # full test suite (Gate D interop tests). Install it so CI actually
+          # exercises those code paths instead of silently skipping 11 tests.
+          pip install -e ".[sim,stats,commonroad,dev]"
+      - name: Run tests
+        run: |
+          PYTHONPATH=src python -m unittest discover -s tests -p "test_*.py" -v
+      - name: CLI smoke (all subcommands)
+        run: |
+          set -euo pipefail
+          PYTHONPATH=src python -m driveevidence.cli.main doctor
+          PYTHONPATH=src python -m driveevidence.cli.main sample --id ci --out /tmp/ci_scenario.json
+          PYTHONPATH=src python -m driveevidence.cli.main run \
+            --scenario examples/scenarios/tailgate_risk.json \
+            --adapter builtin --seed 123 --run-id ci_run --out /tmp
+          PYTHONPATH=src python -m driveevidence.cli.main audit --run /tmp/ci_run
+          PYTHONPATH=src python -m driveevidence.cli.main replay --run /tmp/ci_run --seq 1 --adapter builtin
+          PYTHONPATH=src python -m driveevidence.cli.main report --run /tmp/ci_run --out /tmp/ci_run/report.md
+          PYTHONPATH=src python -m driveevidence.cli.main search \
+            --method random --adapter builtin --budget 16 --seed 2000 \
+            --run-id ci_search --out /tmp
+
+  # The evidence bundles are the published scientific artifacts. Verify them in
+  # CI so a regression in checksum/hash-chain/manifest handling is caught before
+  # release, not after. This job needs no heavy dependencies.
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install package (core only)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e "."
+      - name: Verify evidence bundles
+        run: |
+          python scripts/verify_evidence_bundle.py
+      - name: Build public release copy and privacy-scan it
+        run: |
+          # The public copy is the artifact that actually ships; scan it (not
+          # the private working tree, which intentionally retains local paths
+          # in git history per the D024 decision).
+          python scripts/build_public_release.py --out /tmp/public-release
+          python scripts/privacy_scan.py --root /tmp/public-release

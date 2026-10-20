@@ -1,0 +1,38 @@
+{
+  "trajectory_collision": {
+    "figure": "trajectory_collision.png",
+    "episode": "rand_0003",
+    "archive_file": "0001.json",
+    "source": "runs/formal_experiment_v2p1/episodes/*.json (archived trajectory)"
+  },
+  "gap_and_speed": {
+    "figure": "gap_and_speed.png",
+    "episode": "rand_0003",
+    "archive_file": "0001.json",
+    "source": "runs/formal_experiment_v2p1/episodes/*.json (archived trajectory)"
+  },
+  "search_comparison": {
+    "figure": "search_comparison.png",
+    "source": "runs/formal_experiment_v2p1/summary.json (read directly by make_figures.py; independently recomputed by scripts/verify_evidence_bundle.py)",
+    "random": {
+      "discovery_yield": 0.04443359375,
+      "discovery_hits": 182,
+      "discovery_denom": 4096,
+      "tested": 64,
+      "stable": 57,
+      "stable_yield": 0.890625
+    },
+    "mutation": {
+      "discovery_yield": 0.411376953125,
+      "discovery_hits": 1685,
+      "discovery_denom": 4096,
+      "tested": 64,
+      "stable": 61,
+      "stable_yield": 0.953125
+    }
+  },
+  "evidence_pipeline": {
+    "figure": "evidence_pipeline.png",
+    "source": "schematic (illustrative, labelled as such)"
+  }
+}

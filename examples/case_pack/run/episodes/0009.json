@@ -1,0 +1,110 @@
+{
+  "extra": {
+    "candidate": true,
+    "method": "mutation"
+  },
+  "result": {
+    "adapter_name": "builtin",
+    "adapter_version": "builtin/1.1",
+    "failure_category": "collision",
+    "failure_detail": "collision with vehicle v1 at t=0.50",
+    "metrics": {
+      "final_x_m": 61.56217699509064,
+      "max_v_mps": 31.15544248772661,
+      "min_gap_m": 1.9156252234413813,
+      "min_ttc_s": 0.0797184308176115
+    },
+    "planner_name": "safe_follow",
+    "raw": {
+      "dt": 0.1,
+      "max_steps": 80
+    },
+    "scenario_hash": "d45284e37df8d3549b4e6624e57b3a8ffd1d5d0268f4b3a63cdcb8884e5f501e",
+    "scenario_id": "mut_0011",
+    "seed": 1047619979,
+    "steps": 6,
+    "terminated": true,
+    "trajectory": [
+      {
+        "heading": 0.0,
+        "t": 0.0,
+        "v": 31.15544248772661,
+        "x": 50.0,
+        "y": 1.85
+      },
+      {
+        "heading": 0.0,
+        "t": 0.1,
+        "v": 30.25544248772661,
+        "x": 53.02554424877266,
+        "y": 1.85
+      },
+      {
+        "heading": 0.0,
+        "t": 0.2,
+        "v": 29.355442487726613,
+        "x": 55.96108849754532,
+        "y": 1.85
+      },
+      {
+        "heading": 0.0,
+        "t": 0.30000000000000004,
+        "v": 28.455442487726614,
+        "x": 58.80663274631798,
+        "y": 1.85
+      },
+      {
+        "heading": 0.0,
+        "t": 0.4,
+        "v": 27.555442487726616,
+        "x": 61.56217699509064,
+        "y": 1.85
+      },
+      {
+        "heading": 0.0,
+        "t": 0.5,
+        "v": 26.655442487726617,
+        "x": 64.2277212438633,
+        "y": 1.85
+      }
+    ],
+    "truncated": false,
+    "wall_time_s": 3.5499997466104105e-05
+  },
+  "saved_at": "2026-10-20T11:06:58.526257+00:00",
+  "scenario": {
+    "ego": {
+      "heading_rad": 0.0,
+      "id": "ego",
+      "kind": "car",
+      "length_m": 4.5,
+      "v_mps": 31.15544248772661,
+      "width_m": 1.8,
+      "x_m": 50.0,
+      "y_m": 1.85
+    },
+    "ir_version": "ir/v1",
+    "meta": {},
+    "odd": {},
+    "road": {
+      "lane_width_m": 3.7,
+      "lanes": 3,
+      "road_length_m": 500,
+      "speed_limit_mps": 33.0,
+      "type": "straight"
+    },
+    "scenario_id": "mut_0011",
+    "vehicles": [
+      {
+        "heading_rad": 0.0,
+        "id": "v1",
+        "kind": "car",
+        "length_m": 4.5,
+        "v_mps": 3.5255512342954347,
+        "width_m": 1.8,
+        "x_m": 66.56758172481386,
+        "y_m": 1.85
+      }
+    ]
+  }
+}

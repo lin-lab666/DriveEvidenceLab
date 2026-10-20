@@ -1,0 +1,62 @@
+{
+  "built_at": "2026-10-20T11:07:00.109806+00:00",
+  "files": {
+    "episodes/0001.json": {
+      "sha256": "3a7cdc4bf81b86f6440108f17260a775313e8a821e8dfba5ba6ea5a39c1a1158",
+      "size": 2558
+    },
+    "episodes/0002.json": {
+      "sha256": "dd4e361e823b39c76e5cabfdd043290da8f9131f51e7a730212867df7a5772ff",
+      "size": 2698
+    },
+    "episodes/0003.json": {
+      "sha256": "ed327a921edf6f085db1574a47263836b120c0dab0c6efd1da71136a7754d80d",
+      "size": 2695
+    },
+    "episodes/0004.json": {
+      "sha256": "3c79504c436115736b24dd935520d375052727ae95d8c931dd784c96b00e5080",
+      "size": 2556
+    },
+    "episodes/0005.json": {
+      "sha256": "fa4bae22997d79c62cc213c70c08768e165a76e58ca06ff4d0b8a3d688ed9893",
+      "size": 2557
+    },
+    "episodes/0006.json": {
+      "sha256": "6686d1b24c675572579971e288dd3de4d769292ee5f6dab3819692ccc2ca8e1e",
+      "size": 3012
+    },
+    "episodes/0007.json": {
+      "sha256": "fcec54bcf27f66d9daa48a49dcb0013f67721adfc4dc33c1314aae67262d4005",
+      "size": 2275
+    },
+    "episodes/0008.json": {
+      "sha256": "65ae49079f5fcb6aba991fb56e5cfa2a01a58a44ee11b3fc9cbd0ad791b1edd6",
+      "size": 2032
+    },
+    "episodes/0009.json": {
+      "sha256": "b401160100e35aa992fcceeded78e6bfd940812dac218e9e7571579387c7f3d7",
+      "size": 2416
+    },
+    "episodes/0010.json": {
+      "sha256": "7dc01e193d4da195a2b0d1db5d073de81455f4dbc19f26c38a6b3c4fd47bed99",
+      "size": 2273
+    },
+    "episodes/0011.json": {
+      "sha256": "03889f320e0cbce7803a9fe6b808fc3fbeb228a8dbf93230c37a806a5db64edc",
+      "size": 2276
+    },
+    "episodes/0012.json": {
+      "sha256": "47987e213f8e8d1f597b9ad0f823065052ba9fc5723c0f018c9fe08185acd86d",
+      "size": 2402
+    },
+    "episodes/0013.json": {
+      "sha256": "76a8cb206bad6c9ef72a41d7563d953c06428450d2f44f3024447cb4ede08739",
+      "size": 2030
+    },
+    "ledger.jsonl": {
+      "sha256": "593ffe099c7ec5cc57c75746e329ae96f178ebaed56b1aadeff1e9212ebe4b91",
+      "size": 971
+    }
+  },
+  "generator": "driveevidence/manifest/1.0"
+}

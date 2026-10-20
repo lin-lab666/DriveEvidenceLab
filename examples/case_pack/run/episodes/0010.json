@@ -1,0 +1,103 @@
+{
+  "extra": {
+    "candidate": true,
+    "method": "mutation"
+  },
+  "result": {
+    "adapter_name": "builtin",
+    "adapter_version": "builtin/1.1",
+    "failure_category": "collision",
+    "failure_detail": "collision with vehicle v1 at t=0.40",
+    "metrics": {
+      "final_x_m": 58.609949155377386,
+      "max_v_mps": 30.4998305179246,
+      "min_gap_m": 0.3765981957517752,
+      "min_ttc_s": 0.019125529611246188
+    },
+    "planner_name": "safe_follow",
+    "raw": {
+      "dt": 0.1,
+      "max_steps": 80
+    },
+    "scenario_hash": "9da54645fe66b020519fb79388b59671ac222c1a9378c9f8281a021fda8a9680",
+    "scenario_id": "mut_0012",
+    "seed": 108848200,
+    "steps": 5,
+    "terminated": true,
+    "trajectory": [
+      {
+        "heading": 0.0,
+        "t": 0.0,
+        "v": 30.4998305179246,
+        "x": 50.0,
+        "y": 1.85
+      },
+      {
+        "heading": 0.0,
+        "t": 0.1,
+        "v": 29.5998305179246,
+        "x": 52.95998305179246,
+        "y": 1.85
+      },
+      {
+        "heading": 0.0,
+        "t": 0.2,
+        "v": 28.699830517924603,
+        "x": 55.82996610358492,
+        "y": 1.85
+      },
+      {
+        "heading": 0.0,
+        "t": 0.30000000000000004,
+        "v": 27.799830517924605,
+        "x": 58.609949155377386,
+        "y": 1.85
+      },
+      {
+        "heading": 0.0,
+        "t": 0.4,
+        "v": 26.899830517924606,
+        "x": 61.299932207169846,
+        "y": 1.85
+      }
+    ],
+    "truncated": false,
+    "wall_time_s": 3.239999932702631e-05
+  },
+  "saved_at": "2026-10-20T11:06:58.527326+00:00",
+  "scenario": {
+    "ego": {
+      "heading_rad": 0.0,
+      "id": "ego",
+      "kind": "car",
+      "length_m": 4.5,
+      "v_mps": 30.4998305179246,
+      "width_m": 1.8,
+      "x_m": 50.0,
+      "y_m": 1.85
+    },
+    "ir_version": "ir/v1",
+    "meta": {},
+    "odd": {},
+    "road": {
+      "lane_width_m": 3.7,
+      "lanes": 3,
+      "road_length_m": 500,
+      "speed_limit_mps": 33.0,
+      "type": "straight"
+    },
+    "scenario_id": "mut_0012",
+    "vehicles": [
+      {
+        "heading_rad": 0.0,
+        "id": "v1",
+        "kind": "car",
+        "length_m": 4.5,
+        "v_mps": 8.108966870921172,
+        "width_m": 1.8,
+        "x_m": 61.05385728985281,
+        "y_m": 1.85
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "DriveEvidenceLab: Reproducible Driving Failure Discovery and Evidence Toolkit"
+version: 0.2.0
+authors:
+  - name: "DriveEvidenceLab Team"
+license: Apache-2.0
+repository-code: "https://github.com/lin-lab666/DriveEvidenceLab"

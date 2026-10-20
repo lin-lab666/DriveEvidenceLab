@@ -1,0 +1,96 @@
+{
+  "extra": {
+    "candidate": true,
+    "method": "mutation"
+  },
+  "result": {
+    "adapter_name": "builtin",
+    "adapter_version": "builtin/1.1",
+    "failure_category": "collision",
+    "failure_detail": "collision with vehicle v1 at t=0.30",
+    "metrics": {
+      "final_x_m": 56.33,
+      "max_v_mps": 33.0,
+      "min_gap_m": 1.845650664037045,
+      "min_ttc_s": 0.07992932380807136
+    },
+    "planner_name": "safe_follow",
+    "raw": {
+      "dt": 0.1,
+      "max_steps": 80
+    },
+    "scenario_hash": "e7a0272f12e6e6beda51525060cda84241012d12246dab200a9c15678a327a4a",
+    "scenario_id": "mut_0010",
+    "seed": 2019927517,
+    "steps": 4,
+    "terminated": true,
+    "trajectory": [
+      {
+        "heading": 0.0,
+        "t": 0.0,
+        "v": 33.0,
+        "x": 50.0,
+        "y": 1.85
+      },
+      {
+        "heading": 0.0,
+        "t": 0.1,
+        "v": 32.1,
+        "x": 53.21,
+        "y": 1.85
+      },
+      {
+        "heading": 0.0,
+        "t": 0.2,
+        "v": 31.200000000000003,
+        "x": 56.33,
+        "y": 1.85
+      },
+      {
+        "heading": 0.0,
+        "t": 0.30000000000000004,
+        "v": 30.300000000000004,
+        "x": 59.36,
+        "y": 1.85
+      }
+    ],
+    "truncated": false,
+    "wall_time_s": 2.6999998226528987e-05
+  },
+  "saved_at": "2026-10-20T11:06:58.525077+00:00",
+  "scenario": {
+    "ego": {
+      "heading_rad": 0.0,
+      "id": "ego",
+      "kind": "car",
+      "length_m": 4.5,
+      "v_mps": 33.0,
+      "width_m": 1.8,
+      "x_m": 50.0,
+      "y_m": 1.85
+    },
+    "ir_version": "ir/v1",
+    "meta": {},
+    "odd": {},
+    "road": {
+      "lane_width_m": 3.7,
+      "lanes": 3,
+      "road_length_m": 500,
+      "speed_limit_mps": 33.0,
+      "type": "straight"
+    },
+    "scenario_id": "mut_0010",
+    "vehicles": [
+      {
+        "heading_rad": 0.0,
+        "id": "v1",
+        "kind": "car",
+        "length_m": 4.5,
+        "v_mps": 8.108966870921172,
+        "width_m": 1.8,
+        "x_m": 61.05385728985281,
+        "y_m": 1.85
+      }
+    ]
+  }
+}

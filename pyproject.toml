@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "driveevidence"
+version = "0.2.0"
+description = "Evidence-Driven Autonomous Driving Falsification and Validation Framework (simulation-only research toolkit)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "DriveEvidenceLab Team" }]
+keywords = ["autonomous-driving", "simulation", "falsification", "evidence-chain", "safety-testing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+sim = ["gymnasium>=0.29", "highway-env>=1.10"]
+commonroad = ["commonroad-io>=2026.1"]
+stats = ["scipy>=1.10"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+driveevidence = "driveevidence.cli.main:main"
+
+[project.urls]
+Homepage = "https://github.com/lin-lab666/DriveEvidenceLab"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+driveevidence = ["py.typed"]

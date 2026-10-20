@@ -1,0 +1,63 @@
+DriveEvidenceLab
+Copyright 2026 DriveEvidenceLab Contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+--------------------------------------------------------------------------------
+THIRD-PARTY SOFTWARE NOTICES
+--------------------------------------------------------------------------------
+
+This project depends on the following third-party packages. They are NOT vendored
+into this repository; they are installed by the user via pip. Their licenses are
+listed here for attribution. Versions below are the ones used to produce the
+archived experiment evidence; later compatible versions are expected to work.
+
+1. NumPy
+   License : BSD 3-Clause
+   Copyright: Copyright (c) 2005-2025, NumPy Developers.
+   Source  : https://numpy.org
+   Used for: array maths in statistics, RNG streams for search and perturbation.
+
+2. SciPy  (optional extra: [stats])
+   License : BSD 3-Clause
+   Copyright: Copyright (c) 2001-2025, SciPy Developers.
+   Source  : https://scipy.org
+   Used for: optional numerical helpers. The core estimators and the audit
+             pipeline do NOT require SciPy.
+
+3. Gymnasium  (optional extra: [sim])
+   License : MIT
+   Copyright: Copyright (c) 2016 OpenAI, 2022 Farama Foundation.
+   Source  : https://gymnasium.farama.org
+   Used for: environment interface behind the highway-env adapter.
+
+4. highway-env  (optional extra: [sim])
+   License : MIT
+   Copyright: Copyright (c) 2018-2025 Edouard Leurent.
+   Source  : https://github.com/Farama-Foundation/HighwayEnv
+   Used for: the optional `highwayenv` simulation backend. Results from this
+             backend carry a documented IR-placement approximation and are not
+             merged with `builtin` results.
+
+--------------------------------------------------------------------------------
+AI-ASSISTED DEVELOPMENT DISCLOSURE
+--------------------------------------------------------------------------------
+
+This project was developed with the assistance of LLM-based coding agents
+(multi-agent collaboration: research, implementation, review, and testing
+roles). All experimental artifacts were produced by real executions of the
+code in this repository; no result was hand-authored or fabricated. The
+retraction of protocol v1 (see docs/SCIENTIFIC_AUDIT.zh-CN.md) was found,
+documented and corrected by this process and is retained as part of the
+public record.
+
+--------------------------------------------------------------------------------
+RESEARCH SOFTWARE DISCLAIMER
+--------------------------------------------------------------------------------
+
+This is simulation-only research software. It is NOT a safety certification
+tool, NOT an autonomous driving stack, and NOT evidence about real-world
+collision risk. Simulation results obtained with the bundled kinematic
+`builtin` adapter must never be presented as real-road validation.
+
+No warranty of any kind is provided; see LICENSE sections 7 and 8.

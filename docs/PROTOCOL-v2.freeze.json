@@ -1,0 +1,10 @@
+{
+  "protocol_version": "v2.0",
+  "protocol_file": "docs/PROTOCOL-frozen-v2.md",
+  "protocol_body_sha256": "205ecf9ff156d003887502f438dc4975bcd3a9b3e85b4a2c70feb54eea8a5137",
+  "full_file_sha256": "0a0ac56daad4257c2a7542bcf7a4d50afe0317513a54a9fa7616eceb9054cde1",
+  "hash_convention": "sha256(LF-normalised bytes before <!-- SIGNATURE -->)",
+  "frozen_at_utc": "2026-10-19",
+  "supersedes": "docs/PROTOCOL-frozen-v1.md (stability claims invalidated)",
+  "git_commit": "see git log: first commit containing docs/PROTOCOL-frozen-v2.md (commit hash intentionally not embedded to avoid hash churn)"
+}

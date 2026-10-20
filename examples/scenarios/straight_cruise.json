@@ -1,0 +1,24 @@
+{
+  "ir_version": "ir/v1",
+  "scenario_id": "straight_cruise",
+  "road": {
+    "type": "straight",
+    "road_length_m": 500.0,
+    "lanes": 3,
+    "lane_width_m": 3.7,
+    "speed_limit_mps": 33.0
+  },
+  "ego": {
+    "id": "ego",
+    "x_m": 50.0,
+    "y_m": 1.85,
+    "v_mps": 25.0,
+    "heading_rad": 0.0,
+    "length_m": 4.5,
+    "width_m": 1.8,
+    "kind": "car"
+  },
+  "vehicles": [],
+  "odd": {},
+  "meta": {"description": "Ego drives alone at 25 m/s in the rightmost lane."}
+}
